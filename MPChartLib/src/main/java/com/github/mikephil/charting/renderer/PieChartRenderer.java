@@ -266,6 +266,7 @@ public class PieChartRenderer extends DataRenderer {
             final boolean accountForSliceSpacing = sliceSpace > 0.f && sliceAngle <= 180.f;
 
             mRenderPaint.setColor(dataSet.getColor(j));
+            mRenderPaint.setShadowLayer(100f,0f,0f, dataSet.getColor(j));
 
             final float sliceSpaceAngleOuter = visibleAngleCount == 1 ?
                     0.f :
@@ -1032,6 +1033,7 @@ public class PieChartRenderer extends DataRenderer {
                         * phaseY)) + center.y);
 
                 mRenderPaint.setColor(dataSet.getColor(j));
+                mRenderPaint.setShadowLayer(100f,0f,0f, dataSet.getColor(j));
                 mBitmapCanvas.drawCircle(x, y, circleRadius, mRenderPaint);
             }
 
